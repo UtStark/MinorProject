@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<HEAD> 
+    
+</HEAD>
+
+<body>
+    <table border="1">
+        <tr>    
+            <th> enum </th>
+            <th> Name </th>
+            <th> Attendance </th>
+        </tr>
+        {% for getdata in Attendance%} 
+        <tr> 
+              
+            <td> {{getdata.enum}}</td>
+            <td> {{getdata.name}}</td>
+            <td> {{getdata.attendance}}</td>
+
+        </tr>
+
+        {% endfor %}
+
+
+
+
+
+
+
+    </body>
