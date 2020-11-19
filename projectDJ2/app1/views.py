@@ -4,9 +4,17 @@ from app1.models import Attendance
 def display(request):
 
     show=Attendance.objects.all()
-    #print(display)
 
     return render(request, "page1.html",{'Attendance': show})
+
+def homepage(request):
+
+    return render(request, 'frontPage.html')
+
+def student(request):
+
+    return render(request, 'studentInfo.html')
+
 
     #write a view to show the values of a specefic d\student
 
