@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from app1.models import Attendance
+from .forms import StudentForm
 # Create your views here.
 def display(request):
 
@@ -12,8 +13,21 @@ def homepage(request):
     return render(request, 'frontPage.html')
 
 def student(request):
+	if request.method == 'POST':
 
-    return render(request, 'studentInfo.html')
+		form = StudentForm(request.POST)
+		if form.is_valid():
+
+			enum=form.cleaned_data['enum']
+			data= Attendance.objects.get(enum=enum)
+
+			print(data.name)
+
+			return render(request, 'showAttendance.html',{'data':data})
+
+	form=StudentForm()
+
+	return render(request, 'studentInfo.html', {'form':form})
 
 
     #write a view to show the values of a specefic d\student
