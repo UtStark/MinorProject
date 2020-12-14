@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'projectDJ2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql12376679',
-        'USER': 'sql12376679',
-        'PASSWORD': 'K125biZjnD',
-        'HOST': 'sql12.freemysqlhosting.net',
+        'NAME': 'sql7376165',
+        'USER': 'sql7376165',
+        'PASSWORD': 'puZneXdlF6',
+        'HOST': 'sql7.freemysqlhosting.net',
         'PORT': '3306',
         'OPTIONS':{ 'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"},
         
