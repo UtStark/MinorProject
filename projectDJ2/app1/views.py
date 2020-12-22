@@ -10,7 +10,7 @@ def display(request):
 
 def homepage(request):
 
-    return render(request, 'frontPage.html')
+    return render(request, 'project.html')
 
 def student(request):
 	if request.method == 'POST':
@@ -23,7 +23,7 @@ def student(request):
 
 			print(data.name)
 
-			return render(request, 'showAttendance.html',{'data':data})
+			return render(request, 'attendance.html',{'data':data})
 
 	form=StudentForm()
 

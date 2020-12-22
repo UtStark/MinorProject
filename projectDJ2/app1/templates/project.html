@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minor Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="w3-container w3-center w3-flat-belize-hole">
+		{% load static %}
+		<img src="{% static "logo.jpg" %}" class="w3-circle" style="float: left; height: 100px; width: 100px; margin-top: 16px; margin-bottom: 16px;">
+		<h1>GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</h1>
+		<p class="w3-text-amber">Affiliated to Guru Gobind Singh Indraprastha University, New Delhi</p>
+	</header>
+	<nav class="w3-bar w3-black w3-wide">
+  		<a href="https://gtbit.org/" target="_blank" class="w3-button w3-bar-item"><i class="fa fa-angle-double-right">Discover</i></a>
+  		<a href="#login" class="w3-button w3-bar-item"><i class="fa fa-angle-double-right">Login</i></a>
+  		<a href="#contact" class="w3-button w3-bar-item"><i class="fa fa-angle-double-right">Contact</i></a>
+	</nav>
+	<section>
+		<img class="mySlides" src="{% static "p5.gif" %}"  alt="GTBIT" style="width: 100%; height: 450px">
+		<img class="mySlides" src="{% static "p4.jpg" %}"  style="width: 100%; height: 450px">
+		<img class="mySlides" src="{% static "p2.jpeg" %}"  alt="GTBIT" style="width: 100%; height: 450px">
+	</section>
+	<br>
+	<section id="login" class="w3-container w3-center w3-card-4 w3-light-grey" style="width: 70%; margin: auto;">
+		<h2 class="w3-wide w3-opacity">RFID ATTENDANCE 2020-21</h2>
+		<div class="w3-card-4 w3-container w3-panel w3-flat-silver w3-left" style="width: 50%; height: 300px;">
+			<a href="/admin" style="margin-top: 130px; margin-bottom: 130px;" class="w3-btn w3-white w3-hover-amber w3-border w3-border-amber w3-round-xxlarge w3-wide w3-padding-large"><i>Teacher's Login </i><i class="fa fa-angle-double-right"></i></a>
+		</div>
+		<div class="w3-card-4 w3-container w3-panel w3-flat-silver w3-right" style="width: 50%; height: 300px;">
+			<a href="{% url 'student' %}" style="margin-top: 130px; margin-bottom: 130px;" class="w3-btn w3-white w3-hover-amber w3-border w3-border-amber w3-round-xxlarge w3-wide w3-padding-large"><i>Student's Login </i><i class="fa fa-angle-double-right"></i></a>
+		</div>
+	</section>
+	<br>
+	<footer class="w3-container w3-flat-belize-hole w3-center" style="width: 100%;">
+		<h3 class="w3-text-amber">Guru Tegh Bahadur Institute of Technology</h3>
+		<p class="w3-wide"><i>G-8 Area, Rajouri Garden, New Delhi-64, Ph. : 011-45599900</i></p>
+		<p id="contact" class="w3-wide"><i>Email-ID: gtbit@rediffmail.com</i></p>
+		<p>Guru Tegh Bahadur Institute of Technology is a private engineering college affiliated to Guru Gobind Singh Indraprastha University, Delhi. It was established in 1999 by the Delhi Sikh Gurudwara Management Committee. GTBIT is a degree level technical institute, approved by AICTE. Guru Tegh Bahadur Institute of Technology (GTBIT) aims to be among the premier institutes of engineering and technology in the country, recognised excellence in Teaching, R&D, Sports, Cultural and Social Arena.</p>
+		<hr>
+		<p>&copy; Copyright 2020. All rights reserved.</p>
+	</footer>
+	<script>
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}
+			x[myIndex-1].style.display = "block";
+			setTimeout(carousel, 3000);
+		}
+	</script>
+</body>
+</html>
