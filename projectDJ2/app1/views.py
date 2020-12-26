@@ -19,11 +19,17 @@ def student(request):
 		if form.is_valid():
 
 			Enroll_No_=form.cleaned_data['Enroll_No_']
-			data= Attendance.objects.get(enum=Enroll_No_)
+			try:
+				data= Attendance.objects.get(enum=Enroll_No_)
+				return render(request, 'attendance.html',{'data':data})
+			except:
+				pass
 
-			print(data.name)
 
-			return render(request, 'attendance.html',{'data':data})
+
+			
+
+			
 
 	form=StudentForm()
 
