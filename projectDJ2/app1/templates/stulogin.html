@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student's Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<style>
+		input[type=submit] {
+			border: none;
+			border-radius: 4px;
+			padding: 10px 20px;
+			text-decoration: none;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		input[type=number] {
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid black;
+			border-radius: 6px;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<header class="w3-container w3-center w3-flat-belize-hole">
+		{% load static %}
+		<img src="{% static "logo.jpg" %}" class="w3-circle" style="float: left; height: 100px; width: 100px; margin-top: 16px; margin-bottom: 16px;">
+		<h1>GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</h1>
+		<p class="w3-text-amber">Affiliated to Guru Gobind Singh Indraprastha University, New Delhi</p>
+	</header>
+	<nav class="w3-bar w3-black w3-wide w3-container">
+		<p class="w3-sans-serif w3-wide"><i>Login, </i></p>
+	</nav>
+	<br>
+	<section class="w3-container w3-center w3-card-4 w3-light-grey" style="width: 70%; margin: auto;">
+		<h2 class="w3-wide w3-opacity">STUDENT'S LOGIN</h2>
+		<div class="w3-card-4 w3-container w3-panel w3-flat-silver w3-left" style="width: 100%; height: 400px;">
+			<div style="margin-top: 110px; margin-bottom: 110px;">
+				<form method="post">
+					{% csrf_token %}
+					{{form}}
+					
+				<button type="submit"> Submit </button>
+					
+			
+				</form>
+			</div>
+		</div>
+	</section>
+	<br>
+	<footer class="w3-container w3-flat-belize-hole w3-center" style="width: 100%;">
+		<h3 class="w3-text-amber">Guru Tegh Bahadur Institute of Technology</h3>
+		<p class="w3-wide"><i>G-8 Area, Rajouri Garden, New Delhi-64, Ph. : 011-45599900</i></p>
+		<p id="contact" class="w3-wide"><i>Email-ID: gtbit@rediffmail.com</i></p>
+		<p>Guru Tegh Bahadur Institute of Technology is a private engineering college affiliated to Guru Gobind Singh Indraprastha University, Delhi. It was established in 1999 by the Delhi Sikh Gurudwara Management Committee. GTBIT is a degree level technical institute, approved by AICTE. Guru Tegh Bahadur Institute of Technology (GTBIT) aims to be among the premier institutes of engineering and technology in the country, recognised excellence in Teaching, R&D, Sports, Cultural and Social Arena.</p>
+		<hr>
+		<p>&copy; Copyright 2020. All rights reserved.</p>
+	</footer>
+</body>
+</html>

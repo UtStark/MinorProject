@@ -1,4 +1,4 @@
 from django import forms
 
 class StudentForm(forms.Form):
-	enum = forms.IntegerField()
+	Enroll_No_ = forms.IntegerField()

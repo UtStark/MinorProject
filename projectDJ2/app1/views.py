@@ -27,7 +27,7 @@ def student(request):
 
 	form=StudentForm()
 
-	return render(request, 'studentInfo.html', {'form':form})
+	return render(request, 'stulogin.html', {'form':form})
 
 
     #write a view to show the values of a specefic d\student
