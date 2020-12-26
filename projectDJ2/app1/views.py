@@ -18,8 +18,8 @@ def student(request):
 		form = StudentForm(request.POST)
 		if form.is_valid():
 
-			enum=form.cleaned_data['enum']
-			data= Attendance.objects.get(enum=enum)
+			Enroll_No_=form.cleaned_data['Enroll_No_']
+			data= Attendance.objects.get(enum=Enroll_No_)
 
 			print(data.name)
 
