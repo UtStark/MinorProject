@@ -10,5 +10,5 @@ class Attendance(models.Model):
         db_table = 'Attendance'
 
     def __str__(self):
-        return self.name + "- "+ str(self.enum)
+        return self.name + "- "+ str(self.enum) + "-  " + str(self.attendance)
 
